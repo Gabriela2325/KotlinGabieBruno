@@ -1,4 +1,4 @@
-package com.example.kotlingabiebruno.model
+package com.example.kotlingabiebruno.database.migration.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

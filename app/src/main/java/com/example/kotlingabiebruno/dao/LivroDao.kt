@@ -1,20 +1,21 @@
-package com.example.kotlingabiebruno.dao
-
-import androidx.room.*
-import com.example.kotlingabiebruno.model.Livro
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.Query
+import androidx.room.Update
+import com.example.kotlingabiebruno.database.migration.model.Livro
 
 @Dao
 interface LivroDao {
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert
     suspend fun insert(livro: Livro)
 
+    @Query("SELECT * FROM livro")
+    suspend fun getAll(): List<Livro> // Retorna a lista de livros
+
     @Update
-    suspend fun atualizarLivro(livro: Livro)
+    suspend fun update(livro: Livro) // Alterando para usar a entidade Livro diretamente
 
     @Delete
-    suspend fun excluirLivro(livro: Livro)
-
-    @Query("SELECT * FROM livros")
-    suspend fun getAll(): List<Livro>
+    suspend fun delete(livro: Livro) // Alterando para usar a entidade Livro diretamente
 }
-

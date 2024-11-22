@@ -1,7 +1,7 @@
 package com.example.kotlingabiebruno.dao
 
 import androidx.room.*
-import com.example.kotlingabiebruno.model.Cadernos
+import com.example.kotlingabiebruno.database.migration.model.Cadernos
 
 @Dao
 interface CadernosDao {
