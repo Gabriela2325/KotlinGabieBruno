@@ -2,11 +2,14 @@ package com.example.kotlingabiebruno.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.example.kotlingabiebruno.dao.CadernosDao
-import com.example.kotlingabiebruno.database.migration.model.Livro // Esta parte pode ser removida se você substituir o Livro
+import com.example.kotlingabiebruno.dao.*
+import com.example.kotlingabiebruno.database.migration.model.*
 
-@Database(entities = [], version = 1) // Entidade foi removida
+
+// Liste a entidade 'Cadernos' no parâmetro 'entities'
+@Database(entities = [Cadernos::class,Livro::class], version = 2)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun livroDao(): LivroDao // Referência ao DAO para Livro
-    abstract fun CadernosDao(): CadernosDao
+    abstract fun cadernosDao(): CadernosDao
+    abstract fun livroDao(): LivroDao
 }
+

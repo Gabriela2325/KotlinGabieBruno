@@ -1,4 +1,4 @@
-package com.example.kotlingabiebruno.database.migration.model
+package com.example.kotlingabiebruno.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -10,5 +10,4 @@ data class Cadernos(
     val descricao: String,
     val dataCriacao: Long
 )
-
 
