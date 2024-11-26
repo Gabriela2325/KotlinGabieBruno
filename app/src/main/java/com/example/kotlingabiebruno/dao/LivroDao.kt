@@ -9,15 +9,15 @@ import com.example.kotlingabiebruno.model.Livro
 
 @Dao
 interface LivroDao {
-//    @Insert
-//    suspend fun insert(livro: Livro)
-//
-//    @Query("SELECT * FROM livro")
-//    suspend fun getAll(): List<Livro>
+    @Insert
+    suspend fun insert(livro: Livro)
 
-//    @Update
-//    suspend fun update(livro: Livro)
+    @Query("SELECT * FROM livro")
+    suspend fun getAll(): List<Livro>
 
-//    @Delete
-//    suspend fun delete(livro: Livro)
+    @Update
+    suspend fun update(livro: Livro)
+
+    @Delete
+    suspend fun delete(livro: Livro)
 }
